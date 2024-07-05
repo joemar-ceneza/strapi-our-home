@@ -832,6 +832,7 @@ export interface ApiHeroHero extends Schema.CollectionType {
     singularName: 'hero';
     pluralName: 'heroes';
     displayName: 'hero';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -839,6 +840,7 @@ export interface ApiHeroHero extends Schema.CollectionType {
   attributes: {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
+    isDesktop: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
